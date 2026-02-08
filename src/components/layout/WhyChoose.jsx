@@ -5,49 +5,48 @@ const WhyChoose = () => {
   return (
     <Section id="why-choose">
       <Heading>
-        Why Businesses Choose <br /><span className="webxlayer">WebX Layer</span>
+        Why Choose <br /> <span>WebX Layer</span>
       </Heading>
+
+      <SubHeading>
+        We focus on clean design, clear communication, and websites that actually
+        help your business grow online.
+      </SubHeading>
 
       <CardWrapper>
         <Card>
-          <IconCircle>
-            <Line />
-            <Line />
-            <Line />
-          </IconCircle>
-          <Title>Fast & Responsive Websites</Title>
+          <IconCircle>⚡</IconCircle>
+          <Title>Fast & Responsive</Title>
           <Text>
-            Optimized for speed and smooth experience across all screen sizes.
+            Websites built for speed and smooth performance on mobile, tablet,
+            and desktop devices.
           </Text>
         </Card>
 
         <Card>
-          <IconCircle>
-            <Target />
-          </IconCircle>
-          <Title>Business-Focused Design</Title>
+          <IconCircle>🎯</IconCircle>
+          <Title>Business-First Design</Title>
           <Text>
-            Design decisions driven by user behavior and conversion goals.
+            Simple, modern layouts designed to clearly present your services and
+            build customer trust.
           </Text>
         </Card>
 
         <Card>
-          <IconCircle>
-            <Shield />
-          </IconCircle>
-          <Title>Secure & SEO-Ready</Title>
+          <IconCircle>🔒</IconCircle>
+          <Title>Clean & SEO-Ready Code</Title>
           <Text>
-            Clean architecture, security best practices, and SEO-ready setup.
+            Structured code with basic SEO setup to help your website get
+            discovered on search engines.
           </Text>
         </Card>
 
         <Card>
-          <IconCircle>
-            <Handshake />
-          </IconCircle>
-          <Title>Transparent Pricing & Support</Title>
+          <IconCircle>🤝</IconCircle>
+          <Title>Transparent Pricing</Title>
           <Text>
-            Honest pricing, clear timelines, and long-term technical support.
+            No hidden costs. Clear pricing, honest timelines, and support even
+            after your website goes live.
           </Text>
         </Card>
       </CardWrapper>
@@ -60,21 +59,33 @@ export default WhyChoose;
 /* ===== STYLES ===== */
 
 const Section = styled.section`
-  background: #ffffff;    
-    height:auto;
-    padding: 60px 8%;
+  background: #ffffff;
+  padding: 80px 8%;
 `;
 
 const Heading = styled.h2`
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 60px;
   color: #000;
+  margin-bottom: 12px;
 
   span {
     border-bottom: 2px solid #000;
   }
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
+
+const SubHeading = styled.p`
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
 `;
 
 const CardWrapper = styled.div`
@@ -94,51 +105,27 @@ const CardWrapper = styled.div`
 const Card = styled.div`
   background: #000;
   color: #fff;
-  padding: 36px 30px;
-  border-radius: 14px;
+  padding: 36px 28px;
+  border-radius: 16px;
   transition: all 0.3s ease;
+  border: 1px solid #1f1f1f;
 
   &:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
+    border-color: #444;
   }
 `;
 
 const IconCircle = styled.div`
-  width: 48px;
-  height: 48px;
-  border: 1px solid #333;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-`;
-
-const Line = styled.div`
-  width: 16px;
-  height: 2px;
-  background: #fff;
-  margin: 2px 0;
-`;
-
-const Target = styled.div`
-  width: 14px;
-  height: 14px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-`;
-
-const Shield = styled.div`
-  width: 14px;
-  height: 18px;
-  border: 2px solid #fff;
-  border-radius: 0 0 8px 8px;
-`;
-
-const Handshake = styled.div`
-  width: 18px;
-  height: 2px;
-  background: #fff;
+  font-size: 22px;
+  margin-bottom: 22px;
 `;
 
 const Title = styled.h3`

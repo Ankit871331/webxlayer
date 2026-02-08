@@ -1,58 +1,72 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Button from "../common/Button";
 import Navbar from "./Navbar";
 
-
 const HeroText = () => {
-  
+  return (
+    <Section className="heroText" id="home">
+      <NavbarDiv>
+        <Navbar />
+      </NavbarDiv>
 
-    return (
+      <MainSection>
+        <HeroHeadingDiv className="heroText__container1">
+          <HeroHeading>
+            We Build Websites That Help Your Business Grow
+          </HeroHeading>
+        </HeroHeadingDiv>
 
-        <Section className="heroText" id="home">
-          <NavbarDiv>
-          <Navbar/>
-          </NavbarDiv>
+        <HeadingPeraDiv className="heroText__container2">
+          <HeadingPera>
+            <span className="webxlayer"> WebX Layer</span> creates modern, fast,
+            and scalable websites for startups and businesses ready to stand out
+            online.
+          </HeadingPera>
+        </HeadingPeraDiv>
+      </MainSection>
 
-            <MainSection>
-                <HeroHeadingDiv className="heroText__container1">
-                    <HeroHeading>We Build Websites That Help Your Business Grow</HeroHeading>
-                </HeroHeadingDiv>
-
-                <HeadingPeraDiv className="heroText__container2">
-                    <HeadingPera><span className="webxlayer"> WebX Layer</span> creates modern, fast, and scalable websites for startups and businesses ready to stand out online.</HeadingPera>
-                </HeadingPeraDiv>
-
-            </MainSection>
-          
-        <Button/>
-        </Section>
-
-
-    )
-
-
+      <Button />
+    </Section>
+  );
 };
 
+export default HeroText;
+
+/* ================= ANIMATIONS ================= */
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+/* ================= STYLES ================= */
 
 const Section = styled.section`
   width: auto;
   text-align: center;
-  backgrount-color:black;
-  color:white;
   background-color: black;
+  color: white;
   height: 80vh;
   display: flex;
   gap: 10%;
   flex-direction: column;
   align-items: center;
-   padding-top: 2%;
+  padding-top: 2%;
+
   @media (max-width: 768px) {
- padding-top: 15%;    }
+    padding-top: 15%;
+  }
 `;
 
 const NavbarDiv = styled.div`
-width: 100%;
+  width: 100%;
 `;
 
 const MainSection = styled.div`
@@ -76,6 +90,8 @@ const HeroHeading = styled.h1`
   text-align: center;
   line-height: 1.15;
   margin: 0;
+
+  animation: ${fadeUp} 0.8s ease-out forwards;
 `;
 
 const HeadingPeraDiv = styled.div`
@@ -91,7 +107,7 @@ const HeadingPera = styled.p`
   text-align: center;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
+  animation: ${fadeUp} 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
 `;
-
-
-export default HeroText;

@@ -3,23 +3,31 @@ import styled from "styled-components";
 
 const projects = [
   {
-    title: "Personal Portfolio",
-    description: "A modern personal portfolio built with React and styled-components.",
-    link: "https://portfolio-ankit-orig.netlify.app/",
-  },
-  {
-    title: "College Project: Library Management",
-    description: "A complete library management system using Java and MySQL.",
+    title: "Business Website for Local Brand",
+    description:
+      "A professional multi-page business website designed to build trust and generate customer enquiries.",
+    focus: "Branding • Responsive Design • Lead Generation",
     link: "#",
   },
   {
-    title: "Practice Project: Todo App",
-    description: "A fully functional Todo app with local storage and drag-drop features.",
+    title: "High-Converting Landing Page",
+    description:
+      "A conversion-focused landing page built to promote services and capture leads effectively.",
+    focus: "UI/UX • Call-to-Action • Performance",
     link: "#",
   },
   {
-    title: "E-commerce Demo",
-    description: "A demo e-commerce site with product listings and cart functionality.",
+    title: "Professional Portfolio Website",
+    description:
+      "A clean and modern portfolio website tailored for freelancers and creators.",
+    focus: "Personal Branding • Clean UI • Modern Layout",
+    link: "#",
+  },
+  {
+    title: "E-commerce Website Demo",
+    description:
+      "A demo online store showcasing products, pricing sections, and a smooth shopping experience.",
+    focus: "Product UI • Layout • User Experience",
     link: "#",
   },
 ];
@@ -29,7 +37,7 @@ const Portfolio = () => {
     <PortfolioSection id="projects">
       <Heading>Our Work</Heading>
       <SubHeading>
-        Real projects built with modern technologies and best practices.
+        Websites we design to help businesses grow, convert, and stand out online.
       </SubHeading>
 
       <MarqueeWrapper>
@@ -37,44 +45,58 @@ const Portfolio = () => {
           <ProjectCard key={index}>
             <ProjectTitle>{project.title}</ProjectTitle>
             <ProjectDesc>{project.description}</ProjectDesc>
-            <ProjectLink href={project.link}>
-              View Project →
+            <ProjectFocus>{project.focus}</ProjectFocus>
+
+            <ProjectLink
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Demo →
             </ProjectLink>
           </ProjectCard>
         ))}
       </MarqueeWrapper>
+
+      <Note>
+        More custom projects available based on client requirements.
+      </Note>
     </PortfolioSection>
   );
 };
 
 export default Portfolio;
 
+// ---------------- Styled Components ----------------
 
 const PortfolioSection = styled.section`
-  padding: 60px 20px;
-  background: black;
-  color: white;
+  padding: 90px 20px;
+  background: #000;
+  color: #fff;
   text-align: center;
   overflow: hidden;
 `;
 
 const Heading = styled.h2`
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 14px;
 `;
 
 const SubHeading = styled.p`
-  font-size: 18px;
-  margin-bottom: 40px;
-  color: #bbb;
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #b5b5b5;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const MarqueeWrapper = styled.div`
   display: flex;
   width: max-content;
-  gap: 24px;
-  animation: scroll 25s linear infinite;
+  gap: 30px;
+  animation: scroll 28s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -91,17 +113,17 @@ const MarqueeWrapper = styled.div`
 `;
 
 const ProjectCard = styled.div`
-  background: black;
-  color: white;
-  padding: 24px;
+  background: #000;
+  color: #fff;
+  padding: 28px;
   border-radius: 16px;
-  width: 320px;
-  border: 2px dotted white;
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 360px;
+  border: 2px dotted #fff;
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(255, 255, 255, 0.15);
     border-radius: 0px;
   }
 `;
@@ -113,17 +135,30 @@ const ProjectTitle = styled.h3`
 `;
 
 const ProjectDesc = styled.p`
-  font-size: 16px;
-  color: #aca7a7;
-  margin-bottom: 16px;
+  font-size: 15px;
+  color: #c0c0c0;
+  margin-bottom: 14px;
+  line-height: 1.5;
+`;
+
+const ProjectFocus = styled.p`
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 18px;
 `;
 
 const ProjectLink = styled.a`
-  color: #0077ff;
+  color: #5d50e6;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
-    color: #3399ff;
+    color: #7a70ff;
   }
+`;
+
+const Note = styled.p`
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
 `;

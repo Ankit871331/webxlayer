@@ -2,52 +2,61 @@ import React from "react";
 import styled from "styled-components";
 
 const services = [
-  "One Medical",
-  "Slack",
-  "New York Times",
-  "Zoom",
-  "Walgreens",
-  "Airbnb",
-  "Asana",
-  "Basic Dept",
-  "Coinbase",
+  "Website Design",
+  "Frontend Development",
+  "React & Next.js",
+  "Business Websites",
+  "Portfolio Websites",
+  "Landing Pages",
+  "UI/UX Design",
+  "Website Redesign",
+  "SEO Ready Websites",
 ];
 
-const LogoMarquee = () => {
+const ServicesMarquee = () => {
   return (
     <MarqueeSection id="services">
       <Heading>Our Services</Heading>
+      <SubHeading>What We Build at WebXLayer</SubHeading>
+
       <MarqueeWrapper>
         {services.concat(services).map((service, index) => (
-          <Logo key={index}>{service}</Logo>
+          <ServiceCard key={index}>{service}</ServiceCard>
         ))}
       </MarqueeWrapper>
     </MarqueeSection>
   );
 };
 
-export default LogoMarquee;
+export default ServicesMarquee;
 
 // Styled Components
+
 const MarqueeSection = styled.section`
   background: #ffffff;
-  padding: 60px 20px;
+  padding: 80px 20px;
   overflow: hidden;
   text-align: center;
 `;
 
 const Heading = styled.h2`
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: 800;
   color: #111;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+`;
+
+const SubHeading = styled.p`
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 50px;
 `;
 
 const MarqueeWrapper = styled.div`
   display: flex;
   width: max-content;
   margin: 0 auto;
-  animation: scroll 20s linear infinite;
+  animation: scroll 22s linear infinite;
 
   &:hover {
     animation-play-state: paused;
@@ -63,21 +72,21 @@ const MarqueeWrapper = styled.div`
   }
 `;
 
-const Logo = styled.div`
-  font-weight: bold;
-  font-size: 18px;
-  margin: 0 40px;
-  padding: 10px 20px;
-  background: #f0f0f0;
-  border-radius: 12px;
-  color: #333;
+const ServiceCard = styled.div`
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 28px;
+  padding: 14px 26px;
+  background: #f8f8f8;
+  border-radius: 999px;
+  color: #111;
   white-space: nowrap;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, background 0.2s;
+  border: 1px solid #e5e5e5;
+  transition: all 0.25s ease;
 
   &:hover {
-    background: #e0e0e0;
-    transform: scale(1.1);
+    background: #5d50e6;
+    color: #fff;
+    transform: translateY(-4px);
   }
 `;

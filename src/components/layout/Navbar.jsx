@@ -15,22 +15,22 @@ const Navbar = () => {
 
 
   const openWhatsApp = () => {
-  window.open("https://wa.me/916394269895", "_blank");
-};
+    window.open("https://wa.me/919015467191", "_blank");
+  };
 
   return (
     <Nav>
-<LogoWrapper onClick={() => scrollToSection("home")}>
-  <img src={logo} alt="WebXLayer logo" />
-  <span className="webxlayer">WebX Layer</span>
-</LogoWrapper>
+      <LogoWrapper onClick={() => scrollToSection("home")}>
+        <img src={logo} alt="WebXLayer logo" />
+        <span className="webxlayer">WebX Layer</span>
+      </LogoWrapper>
 
       <Menu open={open}>
         <MenuItem onClick={() => scrollToSection("home")}>Home</MenuItem>
         <MenuItem onClick={() => scrollToSection("services")}>Services</MenuItem>
         <MenuItem onClick={() => scrollToSection("projects")}>Projects</MenuItem>
         <MenuItem onClick={openWhatsApp}>Contact</MenuItem>
-        <MenuItem onClick={() => scrollToSection("prising")}>Prising</MenuItem>
+        <MenuItem onClick={() => scrollToSection("pricing")}>Prising</MenuItem>
       </Menu>
       <Hamburger onClick={() => setOpen(!open)}>
         <span />

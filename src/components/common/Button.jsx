@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Button = () => {
   const openWhatsApp = () => {
-    window.open("https://wa.me/916394269895", "_blank");
+    window.open("https://wa.me/919015467191", "_blank");
   };
 
   const scrollToSection = (id) => {
