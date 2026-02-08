@@ -52,6 +52,10 @@ const Footer = () => {
             -webkit-text-fill-color: transparent;
           }
 
+          .footer-brand>a{
+          cursor: pointer;
+          }
+
           .footer-tagline {
             color: #8a8a8e;
             font-size: 15px;
@@ -172,11 +176,14 @@ const Footer = () => {
         <div className="footer-grid">
 
           {/* Brand Column */}
-          <div className="footer-brand">
+          <div className="footer-brand " >
             {/* ✅ LOGO ADDED */}
+            <a onClick={()=>scrollToSection("home")}  >
             <img src={logo} alt="WebX Layer Logo" className="footer-logo" />
+           
 
             <h2 className="webxlayer">WebX Layer</h2>
+             </a>
             <p className="footer-tagline">
               Premium web experiences for modern brands. We build fast, scalable, and beautiful websites.
             </p>
@@ -218,8 +225,8 @@ const Footer = () => {
             <ul className="footer-list">
               <li><a onClick={() => scrollToSection("projects")} className="footer-link">Our Work</a></li>
               <li><a onClick={() => scrollToSection("pricing")} className="footer-link">Pricing</a></li>
-              <li><a className="footer-link">Testimonials</a></li>
-              <li><a className="footer-link">Privacy</a></li>
+              <li><a className="footer-link" onClick={()=>scrollToSection("projects")} >Testimonials</a></li>
+              <li><a className="footer-link" onClick={()=>scrollToSection("why-choose")}>Privacy</a></li>
             </ul>
           </div>
 
