@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import HeroText from './components/layout/heroText.jsx'
+import HeroText from './components/layout/HeroText.jsx'
 import WhyChoose from './components/layout/WhyChoose.jsx'
 import Services from './components/layout/Services.jsx'
 import Portfolio from './components/layout/Portfolio.jsx'
