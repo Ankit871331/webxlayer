@@ -5,50 +5,53 @@ const WhyChoose = () => {
   return (
     <Section id="why-choose">
       <Heading>
-        Why Choose <br /> <span>WebX Layer</span>
+        Why Local Service Businesses <br /> <span>Choose WebX Layer</span>
       </Heading>
 
       <SubHeading>
-        We focus on clean design, clear communication, and websites that actually
-        help your business grow online.
+        We don’t just design websites — we build conversion-focused systems
+        that help plumbers, HVAC, roofing, and home service businesses
+        generate more calls and book more jobs.
       </SubHeading>
 
       <CardWrapper>
+
+        <Card>
+          <IconCircle>📞</IconCircle>
+          <Title>Built to Generate More Calls</Title>
+          <Text>
+            Every website is structured to guide visitors toward one goal —
+            calling your business or booking your service.
+          </Text>
+        </Card>
+
+        <Card>
+          <IconCircle>🚀</IconCircle>
+          <Title>Optimized for Local Search</Title>
+          <Text>
+            We structure your website to support local SEO, helping you
+            appear when customers search for services in your area.
+          </Text>
+        </Card>
+
         <Card>
           <IconCircle>⚡</IconCircle>
-          <Title>Fast & Responsive</Title>
+          <Title>Fast, Mobile-First Experience</Title>
           <Text>
-            Websites built for speed and smooth performance on mobile, tablet,
-            and desktop devices.
-          </Text>
-        </Card>
-
-        <Card>
-          <IconCircle>🎯</IconCircle>
-          <Title>Business-First Design</Title>
-          <Text>
-            Simple, modern layouts designed to clearly present your services and
-            build customer trust.
-          </Text>
-        </Card>
-
-        <Card>
-          <IconCircle>🔒</IconCircle>
-          <Title>Clean & SEO-Ready Code</Title>
-          <Text>
-            Structured code with basic SEO setup to help your website get
-            discovered on search engines.
+            Most service calls come from mobile. We ensure your site loads
+            fast and works perfectly on every device.
           </Text>
         </Card>
 
         <Card>
           <IconCircle>🤝</IconCircle>
-          <Title>Transparent Pricing</Title>
+          <Title>Clear Pricing & Ongoing Support</Title>
           <Text>
-            No hidden costs. Clear pricing, honest timelines, and support even
-            after your website goes live.
+            No hidden fees. Transparent pricing, realistic timelines,
+            and continued support after launch.
           </Text>
         </Card>
+
       </CardWrapper>
     </Section>
   );
@@ -60,18 +63,18 @@ export default WhyChoose;
 
 const Section = styled.section`
   background: #ffffff;
-  padding: 80px 8%;
+  padding: 100px 8%;
 `;
 
 const Heading = styled.h2`
-  font-size: 38px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
   color: #000;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   span {
-    border-bottom: 2px solid #000;
+    color: #5D50E6;
   }
 
   @media (max-width: 600px) {
@@ -81,17 +84,17 @@ const Heading = styled.h2`
 
 const SubHeading = styled.p`
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
-  max-width: 650px;
-  margin: 0 auto 60px auto;
-  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 70px auto;
+  line-height: 1.7;
 `;
 
 const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 30px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
@@ -105,37 +108,37 @@ const CardWrapper = styled.div`
 const Card = styled.div`
   background: #000;
   color: #fff;
-  padding: 36px 28px;
-  border-radius: 16px;
+  padding: 40px 30px;
+  border-radius: 18px;
   transition: all 0.3s ease;
   border: 1px solid #1f1f1f;
 
   &:hover {
     transform: translateY(-10px);
-    border-color: #444;
+    border-color: #5D50E6;
   }
 `;
 
 const IconCircle = styled.div`
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 `;
 
 const Title = styled.h3`
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 `;
 
 const Text = styled.p`
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
   color: #cccccc;
 `;

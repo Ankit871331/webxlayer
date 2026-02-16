@@ -37,10 +37,15 @@ const Card = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 
   border: ${props => props.highlight ? '2px solid #000' : '1px solid #E5E5E5'};
   box-shadow: ${props => props.highlight ? '8px 8px 0px #000' : 'none'};
-`;
+
+  
+
+  `;
 
 const Tag = styled.span`
   position: absolute;
@@ -129,52 +134,116 @@ const PricingTable = () => {
     window.open(url, "_blank");
   };
 
-  const plans = [
-    {
-      name: "Individuals / Starters",
-      price: "₹4,999",
-      desc: "Best for personal brands, freelancers & individuals starting online.",
-      features: [
-        { text: "1–3 Page Website", inc: true },
-        { text: "Responsive Design", inc: true },
-        { text: "Basic UI/UX", inc: true },
-        { text: "Contact Form", inc: true },
-        { text: "SEO Optimization", inc: false },
-        { text: "Backend / Admin Panel", inc: false },
-      ],
-      btn: "Get Started"
-    },
-    {
-      name: "Business",
-      price: "₹9,999",
-      desc: "Perfect for startups & small businesses who want a professional presence.",
-      highlight: true,
-      tag: "Most Popular",
-      features: [
-        { text: "5–7 Page Website", inc: true },
-        { text: "Custom UI/UX Design", inc: true },
-        { text: "Mobile Optimized", inc: true },
-        { text: "Basic SEO Setup", inc: true },
-        { text: "WhatsApp Integration", inc: true },
-        { text: "1 Month Support", inc: true },
-      ],
-      btn: "Start Business Site"
-    },
-    {
-      name: "Enterprise / Custom",
-      price: "Custom",
-      desc: "Advanced solutions for brands needing scalability & custom features.",
-      features: [
-        { text: "Unlimited Pages", inc: true },
-        { text: "Custom Animations", inc: true },
-        { text: "Backend / Admin Panel", inc: true },
-        { text: "Database Integration", inc: true },
-        { text: "Advanced SEO", inc: true },
-        { text: "Priority Support", inc: true },
-      ],
-      btn: "Contact Us"
-    }
-  ];
+//Indian pricing plans data
+
+  // const plans = [
+  //   {
+  //     name: "Individuals / Starters",
+  //     price: "₹4,999",
+  //     desc: "Best for personal brands, freelancers & individuals starting online.",
+  //     features: [
+  //       { text: "1–3 Page Website", inc: true },
+  //       { text: "Responsive Design", inc: true },
+  //       { text: "Basic UI/UX", inc: true },
+  //       { text: "Contact Form", inc: true },
+  //       { text: "SEO Optimization", inc: false },
+  //       { text: "Backend / Admin Panel", inc: false },
+  //     ],
+  //     btn: "Get Started"
+  //   },
+  //   {
+  //     name: "Business",
+  //     price: "₹9,999",
+  //     desc: "Perfect for startups & small businesses who want a professional presence.",
+  //     highlight: true,
+  //     tag: "Most Popular",
+  //     features: [
+  //       { text: "5–7 Page Website", inc: true },
+  //       { text: "Custom UI/UX Design", inc: true },
+  //       { text: "Mobile Optimized", inc: true },
+  //       { text: "Basic SEO Setup", inc: true },
+  //       { text: "WhatsApp Integration", inc: true },
+  //       { text: "1 Month Support", inc: true },
+  //     ],
+  //     btn: "Start Business Site"
+  //   },
+  //   {
+  //     name: "Enterprise / Custom",
+  //     price: "Custom",
+  //     desc: "Advanced solutions for brands needing scalability & custom features.",
+  //     features: [
+  //       { text: "Unlimited Pages", inc: true },
+  //       { text: "Custom Animations", inc: true },
+  //       { text: "Backend / Admin Panel", inc: true },
+  //       { text: "Database Integration", inc: true },
+  //       { text: "Advanced SEO", inc: true },
+  //       { text: "Priority Support", inc: true },
+  //     ],
+  //     btn: "Contact Us"
+  //   }
+  // ];
+
+
+  
+
+
+//International pricing plans data
+
+
+
+const plans = [
+  {
+    name: "Starter Website",
+    price: "$299",
+    desc: "Perfect for small service businesses who need more calls and online presence.",
+    features: [
+      { text: "1 Page High-Converting Website", inc: true },
+      { text: "Mobile Optimized", inc: true },
+      { text: "Click-to-Call Integration", inc: true },
+      { text: "Contact / Quote Form", inc: true },
+      { text: "Google Maps Integration", inc: true },
+      { text: "Basic Local SEO Setup", inc: true },
+    ],
+    btn: "Get Started"
+  },
+  {
+    name: "Growth Package",
+    price: "$499",
+    desc: "Best for businesses ready to generate consistent leads online.",
+    highlight: true,
+    tag: "Most Popular",
+    features: [
+      { text: "3–5 Page Website", inc: true },
+      { text: "Conversion-Focused Design", inc: true },
+      { text: "Lead Capture Forms", inc: true },
+      { text: "Google Reviews Integration", inc: true },
+      { text: "Local SEO Optimization", inc: true },
+      { text: "1 Month Support", inc: true },
+    ],
+    btn: "Book Free Consultation"
+  },
+  {
+    name: "Authority Package",
+    price: "$899",
+    desc: "Advanced solution for businesses wanting maximum visibility and bookings.",
+    features: [
+      { text: "5+ Pages", inc: true },
+      { text: "Service Area Pages", inc: true },
+      { text: "Advanced Local SEO", inc: true },
+      { text: "Booking System Integration", inc: true },
+      { text: "Priority Support", inc: true },
+      { text: "Performance Optimization", inc: true },
+    ],
+    btn: "Book Strategy Call"
+  }
+];
+
+
+
+
+
+
+  
 
   return (
     <Container id="pricing">

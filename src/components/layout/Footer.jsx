@@ -190,7 +190,7 @@ const Footer = () => {
 
             {/* ✅ CTA BUTTON */}
             <a
-              href="https://wa.me/919015467191"
+              href="https://calendly.com/webxlayer/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-cta"
@@ -212,10 +212,14 @@ const Footer = () => {
           <div>
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-list">
+              <li><a className="footer-link">Business Websites</a></li>
+              <li><a className="footer-link">Landing Pages</a></li>
+              <li><a className="footer-link">Responsive Development</a></li>
+              <li><a className="footer-link">SEO Optimization</a></li>
               <li><a className="footer-link">UI/UX Design</a></li>
               <li><a className="footer-link">Web Development</a></li>
               <li><a className="footer-link">E-commerce</a></li>
-              <li><a className="footer-link">Maintenance</a></li>
+              <li><a className="footer-link">Website Maintenance</a></li>
             </ul>
           </div>
 
