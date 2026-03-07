@@ -203,7 +203,7 @@ const Footer = () => {
               {/* <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaXTwitter /></a> */}
               {/* <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedinIn /></a> */}
               <a href="https://www.instagram.com/webxlayer/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
-              {/* <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a> */}
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaFacebookF /></a>
               {/* <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub /></a> */}
             </div>
           </div>
